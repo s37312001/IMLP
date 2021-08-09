@@ -1,0 +1,30 @@
+%matplotlib inline  #IPython notebook中的魔法方法，這樣每次運行後可以直接得到圖像，不再需要使用plt.show()
+
+numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)
+  在指定的間隔內返回均勻間隔的數字
+  num = 生成的樣本數，默認是50。必須是非負。
+  endpoint = 如果是真，則一定包括stop，如果為False，一定不會有stop
+
+
+*為什麼legend括弧裡面是loc=1? A: loc代表擺放legend的位置
+*為什麼pie plot要寫 plt.axis("equal") A: plt.axis("equal")是創建一個正方形圖，其中兩個軸的範圍都等於圖中的長度。有些套件在創建時(設計的預設值剛好也是"equal")
+
+
+plt.grid(True) 顯示格線
+
+長條圖的index代表索引值，便於後續長條圖的位置設定
+plt.bar(索引值, 參數, bar_width設定長條寬度, alpha=.6設定透明度, label="標籤")
+plt.xticks(索引值, "長條圖文字") #xticks為x軸文字
+
+np.random.multivariate_normal 一種常態分布
+
+seaborn.cubehelix_palette
+# n_colors → 顏色個數
+# start → 值區間在[0,3]，開始顏色
+# rot → float,顏色旋轉角度,可能是（-1,1）之間
+# gamma → 顏色伽馬值，>1 較亮，<1 較暗
+# dark，light → 值區間0-1，顏色深淺
+# reverse → 布林值，預設為False，由淺到深
+
+kdeplot = 核密度估計(Kernel Density Estimation, KDE)在概率論中用來估計未知的密度函數
+sns.kdeplot(x,cumulative=True) #cumulative 累積分佈
